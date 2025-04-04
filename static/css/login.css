@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5vmin;
+    font-weight: 900;
+}
+
+body {
+    /* background-color: rgb(0, 121, 168); */
+    background-color: rgb(170, 161, 161);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 3s;
+    gap: 10vmin;
+    margin-top: 20vmin;
+}
+
+main>form {
+    display: flex;
+    flex-direction: column;
+    gap: 4vmin;
+}
+
+main>form>div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main>form>div>input {
+    width: 50vmin;
+    height: 5vmin;
+    border-style: none;
+}
+
+main>form>div>label {
+    position: absolute;
+    pointer-events: none;
+    top: .2vmin;
+    transition: all ease 1.8s;
+}
+
+main>form>div>input:focus+label {
+    border-style: none;
+    top: -3vmin;
+}
+
+main>form>div>button,
+main>form>div>a {
+    height: 6vmin;
+    color: white;
+    background-color: rgb(0, 0, 82);
+    cursor: grabbing;
+    text-align: center;
+    margin-top: .4vmin;
+    margin-bottom: .4vmin;
+}
+
+main>form>div>a {
+    padding-top: 1vmin;
+}
+
+main>form>div>button:hover,
+main>form>div>a:hover {
+    color: rgb(0, 0, 82);
+    background-color: white;
+}
+
+main>img {
+    width: 50vmin;
+    height: auto;
+    animation: drop infinite 1s;
+    transition: all ease 1s;
+}
+
+main>img:hover {
+    transform: scale(1.2) translate(10%) rotate(10deg);
+}
+
+@keyframes drop {
+    from {
+        filter: drop-shadow(1px 1px 5px rgb(255, 0, 0));
+    }
+
+    to {
+        filter: drop-shadow(1px 1px 5px rgb(0, 110, 255));
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    main {
+        flex-direction: column-reverse;
+        gap: 5vmin;
+    }
+}

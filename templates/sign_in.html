@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-In</title>
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+</head>
+<body>
+    <header></header>
+    <nav class = "navbar bg-white">
+        <div class="container">
+            <div class = "navbar-content">
+                <div class = "brand-and-toggler">
+                    <a href = "/" class = "navbar-brand">
+                        <img src = "{% static 'other/curriculum-vitae.png'%}" alt = "" class = "navbar-brand-icon">
+                        <span class = "navbar-brand-text">Sign-In<span> Page</span>
+                    </a>
+                    <button type = "button" class = "navbar-toggler-btn">
+                        <div class = "bars">
+                            <div class = "bar"></div>
+                            <div class = "bar"></div>
+                            <div class = "bar"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <h1 style="text-align:center;background-color: white;border: 1px solid rgb(0,0,255);">{{error}}</h1>
+    <main>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <input type="text" name="u_name" id="u_name">
+                <label for="u_name">Enter Username :</label>
+            </div>
+            <div>
+                <input type="password" name="u_pass" id="u_pass">
+                <label for="u_pass">Enter Password :</label>
+            </div>
+            <div>
+                <button type="submit">Sign In</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        <img src="{% static 'other/visual-0c7080adf17f1f207276f613447c924f667dab34b7ac415cd7ef653172defd0b.svg' %}" alt="">
+    </main>    
+    <footer class = "footer bg-dark">
+        <div class="container">
+            <div class = "footer-content text-center">
+                <p class="fs-15">&copy;Copyright 2025. All Rights Reserved - <span>build.resume </span><span>| Sumit Kumar</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
